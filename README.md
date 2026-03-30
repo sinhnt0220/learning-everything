@@ -15,9 +15,8 @@ Tired of linear, shallow AI tutorials? The Knowledge Architect skill forces you 
 Install this skill globally to any standard open agent runtime (like Claude Code, Antigravity, AutoGPT) via the Skills CLI:
 
 ```bash
-npx skills add <YOUR-GITHUB-USERNAME>/<REPO-NAME>@.agents/skills/feifei-os-public
+npx skills add sinhnt0220/learning-everything
 ```
-*(You will replace the username and repo name above with your actual GitHub info once you publish it).*
 
 ## 💡 How to Use
 
