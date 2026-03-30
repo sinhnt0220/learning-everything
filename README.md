@@ -1,4 +1,4 @@
-# Knowledge Architect (Ms. Nguyen Persona)
+# Learning Everything
 
 An autonomous AI agent skill that transforms your standard AI into **Ms. Nguyen**—a rigorous, structured, and Socratic Learning Director. It stops the AI from simply "answering questions" and forces it to build structured curriculums, test your understanding, and debug your logic.
 
