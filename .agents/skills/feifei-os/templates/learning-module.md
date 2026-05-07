@@ -1,9 +1,10 @@
 ---
 aliases:
 tags:
-  - type/zettel
-  - topic/learn/
+  - type/literature
 status: wip
+type: 
+project: "[[ ]]"
 created: [YYYY-MM-DD] 
 ---
 
@@ -23,25 +24,20 @@ created: [YYYY-MM-DD]
 *(Chuyển hóa khái niệm học thuật thành hình thể thị giác)*
 - (1 câu chuyện / 1 ẩn dụ đời thực sắc bén nhất để ghim vĩnh viễn vào não bộ)
 
-## Phần 4. Cuộc Tranh Biện Socratic (Socratic Challenge)
-*(Đẩy nhận thức vào chân tường bằng mâu thuẫn)*
-- **Ca Bệnh Lâm Sàng:** (Trình bày một vấn đề thực tế: một hệ thống sụp đổ, một bài viết nhạt nhẽo, một kịch bản thiếu cao trào).
-- **Phản Biện Khai Phóng:** (Hỏi 1-2 câu sâu sắc buộc Sinh phải dùng Nguyên Lý Gốc [P2] để cứu vãn hệ thống này).
+---
+
+## Phần 4. Thao Trường Thực Hành (The Sandbox - Technical Only)
+*(Chỉ dành cho các bộ môn Kỹ thuật/Lập trình: Cung cấp ít nhất 1 bài tập mô phỏng nhỏ, đoạn code copy/paste được để Sinh có thể chạy thử và ngay lập tức thấy Feedback Loop).*
 
 ---
 
-## Phần 5. Thảo Luận và Trả lời (The User's Playground)
+## Phần 5. Xưởng Đúc Kết (Permanent Note Factory)
+*Luật chơi (Thay cho Kỹ thuật Feynman & Làm bài tập cũ): Sinh phải tự tay đúc kết toàn bộ nguyên lý cốt lõi của Module này thành một Permanent Note sắc bén, dùng ngôn từ thực chiến của chính mình. Bắt buộc phải gắn liền với một bối cảnh thực tế (VD: Áp dụng vào B2G Sales, viết Code, v.v).*
 
-### 5.1 Kỹ Thuật Feynman (Feynman Technique)
-*Luật chơi: Giải thích lại lý thuyết trên cho một người ngoại đạo (hoặc một đứa bé 12 tuổi) với ngôn từ phi học thuật.*
-> [SÂN CHƠI TƯ DUY CỦA SINH: TRẢ LỜI TẠI ĐÂY LƯU XUỐNG FILE TRƯỚC KHI BÁO FEI FEI]
+> [XƯỞNG ĐÚC KẾT: VIẾT PERMANENT NOTE CỦA SINH VÀO ĐÂY VÀ LƯU FILE TRƯỚC KHI GỌI LỆNH COMPLETE]
 
-### 5.2 Thực Thi Chuyên Môn (Practical Execution)
-*Luật chơi: Đóng vai Chuyên gia / Kiến trúc sư / Đạo diễn, giải quyết ca bệnh lâm sàng ở Phần 4.*
-> [SÂN CHƠI TƯ DUY CỦA SINH: TRẢ LỜI CÁCH CHIẾN LƯỢC TẠI ĐÂY]
-
-## Phần 6. Nhật Ký Socratic Của Fei Fei (AI Feedback)
-*(Hệ thống tự động khắc băng ghi nhận Lỗi Logic, Điểm Chạm Aha, và Cấp Chứng Nhận Năng Lực Cốt Lõi vào đây sau khi Sinh nộp bài)*
+## Phần 5. Nhật Ký Socratic Của Fei Fei (AI Feedback)
+*(Fei Fei sẽ chấm điểm trực tiếp viên gạch Permanent Note này: Ngôn từ có bị copy/paste không? Ví dụ thực tế có sắc bén không? Nếu đạt, cho phép đi tiếp. Nếu hổng kiến thức, yêu cầu mổ sẻ thêm trước khi tốt nghiệp).*
 
 ## Tiêu Điểm Kết Nối (Nexus Links)
 -  Tổng giáo án: [[Tên Sub-MoC]]

@@ -1,39 +1,60 @@
 ---
-aliases: 
+aliases:
   - "{{title}}"
 tags:
   - type/moc
-  - topic/{{topic}}
 status: in-progress
-updated: {{date}}
+priority: high
+created: {{date}}
+type: moc
+project:
+  - "[[{{title}} - MoC]]"
+domain: "[[{{domain}}]]"
 ---
 
-# 🗺️ Bản đồ & Nhật ký Huấn luyện: {{title}}
+# 🎯 {{title}}
+
+> [!info] Mục tiêu cốt lõi
+> [Điền mục tiêu tối thượng của môn học này]
+
+## 📡 HỆ THỐNG LIÊN KẾT (RADAR V4)
+
+### 📚 Tư liệu liên quan (Literature)
+```dataview
+TABLE status AS "Trạng Thái", created AS "Ngày Tạo"
+FROM -"00_Templates"
+WHERE type = "literature" AND contains(file.outlinks, this.file.link)
+SORT ASC
+```
+
+### 💎 Nội dung đã chưng cất (Permanent)
+```dataview
+TABLE status AS "Tiến độ", created as "Ngày Tạo"
+FROM -"00_Templates"
+WHERE type = "permanent" AND contains(file.outlinks, this.file.link)
+SORT created ASC
+```
+
+### 🧠 Xưởng Đúc Kết (Synthesis)
+```dataview
+TABLE status AS "Tiến độ", created as "Ngày Tạo"
+FROM -"00_Templates"
+WHERE type = "synthesis" AND contains(file.outlinks, this.file.link)
+SORT created ASC
+```
 
 ---
 
-## 🏛️ HỒ SƠ HUẤN LUYỆN (Fei Fei Persona)
-- **Hệ điều hành:** Fei Fei OS 
-- **Mục tiêu:** [Điền mục tiêu tối thượng của môn học này]
-- **Phân tích Đầu vào (Phase 0):** [Ghi nhận baseline hiện tại của Sinh trước khi học: đang thiếu hụt gì, điểm mạnh là gì]
-- **Trạng thái hiện tại:** ⏳ **ĐANG HUẤN LUYỆN** 
+## LỘ TRÌNH HUẤN LUYỆN (THE CURRICULUM)
 
----
-
-## BẢN ĐỒ KIẾN TRÚC PHÂN TẦNG (The Map & Logs)
-
-### GIAI ĐOẠN 1: [Tên Giai Đoạn] ⏳
-[Mục tiêu của giai đoạn]
-**Status:** Đang học
-
-- [[Tên Module 1.1]] ⏳
+### 🏛️ MODULE 1: [Tên Giai Đoạn]
+*[Mục tiêu của giai đoạn]*
+- [ ] [[Tên Module 1.1]] ⏳
   - **Fei Fei Feedback:** [AI sẽ ghi đè nhận xét rút gọn vào đây sau lệnh /complete-module]
-- [[Tên Module 1.2]] (Chờ Start)
-
-**Sinh Note**:
-	- [Sinh sẽ ghi chú chắt lọc các khái niệm cốt lõi tại đây sau mỗi module]
+- [ ] [[Tên Module 1.2]] (Chờ Start)
 
 ---
+
 ## 📜 DẤU ẤN TOÀN HÀNH TRÌNH (The Legacy)
 - **Thành quả lớn nhất:** [Sẽ tổng hợp khi hoàn thành toàn bộ lộ trình]
 - **Hành động thực tế:** [Kế hoạch vận hành vào thực tiễn]

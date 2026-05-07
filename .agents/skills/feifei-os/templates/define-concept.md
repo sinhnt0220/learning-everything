@@ -4,6 +4,8 @@ tags:
   - type/zettel
   - topic/concept
 status: idea
+type: 
+project: "[[ ]]"
 created: [YYYY-MM-DD] 
 ---
 
