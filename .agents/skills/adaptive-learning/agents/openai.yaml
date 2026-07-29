@@ -1,0 +1,7 @@
+interface:
+  display_name: "Adaptive Learning Architect — Ms. Nguyen"
+  short_description: "Học thích ứng, có thực hành và bằng chứng"
+  default_prompt: "Dùng $adaptive-learning để dạy tôi một chủ đề theo trình độ hiện tại, có thực hành và bằng chứng kiểm chứng."
+
+policy:
+  allow_implicit_invocation: true
