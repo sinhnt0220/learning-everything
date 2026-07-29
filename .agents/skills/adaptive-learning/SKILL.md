@@ -45,6 +45,7 @@ Không đóng vai “giáo sư danh tiếng”. Chỉ tuyên bố năng lực tr
 15. **Tách bài học khỏi state nội bộ.** Learning map, evidence ledger, readiness gate, target stage, rubric chấm, permission audit và context handoff là công cụ điều phối của Codex, trừ khi learner thật sự cần vận hành chúng. Không chép các mục này vào module learner-facing. Bài học phải bắt đầu từ việc learner làm được gì và dành nội dung cho kiến thức, cơ chế, ví dụ và hành động học.
 16. **Tín hiệu không hiểu là evidence.** Nếu người học không biết một file/khái niệm dùng để làm gì, hạ state, dừng tiến trình và dạy lại qua trace thật; không cộng thêm jargon hay chấm PASS vì artifact tồn tại.
 17. **Scaffold theo evidence, không scaffold phòng ngừa.** Khi prerequisite đã đủ và task ít rủi ro, dạy lý thuyết rồi giao cold attempt. Chỉ thêm worked example, checklist hoặc guided action khi learner chưa có schema, tải nhận thức/rủi ro cao hoặc một lần thử đã lộ lỗi cần remediation.
+18. **Không biến click thành module.** Một module phải xây một năng lực hoặc quyết định có thể dùng được; nhiều thao tác UI/câu lệnh cùng tạo một outcome có thể nằm trong một lab.
 
 ## Workspace
 
@@ -86,6 +87,15 @@ Không tự động sửa, di chuyển hoặc ghi vào Obsidian. File cũ bên n
 
 Người học không phải quản lý YAML, backlink, trạng thái hay lịch recall.
 
+## Nhịp học mặc định
+
+- Thiết kế một module learner-facing như một block khoảng **25 phút**: định vị/đọc ngắn, hiểu cơ chế, một thực hành hoặc phân tích, rồi kiểm tra/feedback khi cần.
+- Gom các thao tác kỹ thuật có cùng outcome, artifact và permission boundary vào một lab. Không tạo module mới chỉ vì một click, ảnh chụp hay state UI thay đổi.
+- Tách block khi xuất hiện năng lực mới, dependency mới, permission/side effect mới hoặc một điểm kiểm chứng độc lập; không tách theo số click.
+- `MICRO` được phép là câu trả lời 2–10 phút trong chat và không tạo file. `DEEP` được phép kéo dài nhiều block 25 phút nếu dependency/rủi ro đòi hỏi.
+- Chỉ yêu cầu screenshot khi UI là bằng chứng cần thiết mà không thể kiểm chứng bằng artifact, log hoặc output khác.
+- Cập nhật state nội bộ ở cuối lab/phase; ghi ngay sau sự kiện không đảo ngược như commit, push, merge, publish hoặc thao tác có chi phí.
+
 ## Workflow `/learn`
 
 1. Tìm khóa học cùng chủ đề và đọc `courses/learner-profile.md` nếu tồn tại. Nếu course đã có, đọc `learning-map.md`, artifact và evidence gần nhất rồi tiếp tục; không tạo lại từ đầu.
@@ -102,7 +112,7 @@ Người học không phải quản lý YAML, backlink, trạng thái hay lịch
 1. Đọc context packet, evidence ledger tóm tắt, entry liên quan trong `work/evidence-log.md`, prerequisite và artifact gần nhất.
 2. Chọn một năng lực khóa chưa đạt target stage.
 3. Định tuyến loại năng lực và chọn lesson sequence theo `domain-router.md`.
-4. Chọn riêng hai quyết định theo `lesson-depth.md`: depth `MICRO | STANDARD | DEEP` và support route `COLD | SCAFFOLDED | REMEDIATION`; tách module nếu dependency/tải nhận thức vượt ngưỡng.
+4. Chọn riêng hai quyết định theo `lesson-depth.md`: depth `MICRO | STANDARD | DEEP` và support route `COLD | SCAFFOLDED | REMEDIATION`; mặc định thiết kế block 25 phút và chỉ tách module nếu dependency/tải nhận thức/permission vượt ngưỡng.
 5. Nói rõ kiến thức mới và lý do đáng học; target stage chỉ ghi trong state nội bộ.
 6. Chạy learner usability gate: nêu kết quả, lúc cần/không cần, việc người học không phải làm và một hành động kế tiếp trước khi dùng thuật ngữ.
 7. Dạy đủ từ vựng, ranh giới, cơ chế/quy trình và điều kiện áp dụng theo depth route; không mặc định phải có worked example.

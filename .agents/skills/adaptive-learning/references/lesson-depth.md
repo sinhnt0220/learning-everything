@@ -70,6 +70,19 @@ Tách theo capability hoặc dependency, không cắt cơ học theo số chữ.
 
 Độ sâu trả lời “kiến thức phức tạp đến đâu”. Support route trả lời “learner cần được hỗ trợ trước khi thử đến mức nào”. Không suy từ `STANDARD/DEEP` rằng luôn phải có worked example.
 
+## 5.1. Gom thao tác thành lab
+
+Số click, screenshot hay command không quyết định số module. Với product/tool, gom chúng vào cùng một lab khi learner đang tạo một outcome hoặc artifact duy nhất dưới cùng permission boundary.
+
+Tách lab khi có một trong các điều kiện sau:
+
+- learner phải vận dụng một capability mới;
+- xuất hiện tool, dữ liệu, quyền hoặc side effect mới;
+- cần proof độc lập thay vì chỉ xác nhận state;
+- tải nhận thức vượt block mặc định khoảng 25 phút.
+
+Ví dụ: tạo branch → stage scope → commit → push → mở draft PR là một release lab có checkpoints an toàn; không phải năm module chỉ vì có năm thao tác.
+
 ### `COLD`
 
 Dùng mặc định khi prerequisite đã đủ, task có thể đảo ngược/ít rủi ro và learner đã có reasoning nền liên quan.

@@ -107,6 +107,16 @@ Dùng cold case biên, debugging, trade-off, phản ví dụ, transfer và ngu�
 - Dùng artifact nhỏ trước artifact thật khi môi trường có chi phí/rủi ro.
 - Một hành động chính có thể chứa nhiều bước tự nhiên bên trong; không biến nó thành hàng loạt câu hỏi vụn.
 
+## 4.1. Nhịp block và lab thao tác
+
+Mặc định thiết kế một module learner-facing cho khoảng **25 phút** làm việc thực: định vị/đọc ngắn → hiểu cơ chế → thực hành hoặc phân tích → kiểm tra/feedback khi cần.
+
+- Với tool, Git, automation hoặc product, gom nhiều click/câu lệnh vào một lab khi chúng cùng tạo một outcome, artifact và permission boundary.
+- Không tạo module chỉ để chuyển một state UI, chụp màn hình hoặc xác nhận một click đã xảy ra.
+- Tách lab khi learner phải dùng năng lực mới, đối mặt side effect/permission mới, hoặc cần một điểm proof độc lập.
+- `MICRO` có thể là một tương tác chat ngắn, không cần file. `DEEP` có thể qua nhiều block; không ép hoàn thành trong 25 phút.
+- Cập nhật learning map/evidence log sau một lab/phase; riêng commit, push, merge, publish hoặc chi phí phải được ghi ngay sau khi xảy ra.
+
 ## 5. Retrieval và tích lũy
 
 - Cài kiến thức cũ vào bài mới thay vì tạo lịch ôn bắt buộc.
