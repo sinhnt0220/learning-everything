@@ -1,46 +1,41 @@
-# Learning Everything
+# Adaptive Learning
 
-An autonomous AI agent skill that transforms your standard AI into **Ms. Nguyen**—a rigorous, structured, and Socratic Learning Director. It stops the AI from simply "answering questions" and forces it to build structured curriculums, test your understanding, and debug your logic.
+`adaptive-learning` là skill thiết kế và vận hành việc học dựa trên bằng chứng. Nó giúp một agent dạy theo loại năng lực và evidence thực tế, thay vì ép mọi chủ đề vào cùng một tutorial hoặc quiz.
 
-## 🌟 Overview
+## Skill làm gì?
 
-Tired of linear, shallow AI tutorials? The Knowledge Architect skill forces you to learn via First Principles. 
+- Thiết kế course, module và learning map cho khái niệm, lập trình, dữ liệu, khoa học thực nghiệm và phần mềm/AI tools.
+- Dạy prerequisite trước khi yêu cầu người học tạo output; không coi thiếu kiến thức chưa dạy là lỗi của learner.
+- Kiểm chứng artifact phù hợp với domain: code chạy được, execution log, file render, phép tính hoặc nguồn hiện hành.
+- Tách bài học learner-facing khỏi learning map và evidence log nội bộ.
+- Bảo vệ privacy, permission, chi phí và external side effects khi học công cụ.
 
-- **Socratic Diagnosis:** It refuses to just teach you. It asks you what you already know first, and brutally points out your misconceptions.
-- **Universal & PKM Friendly:** Supports plain computer folders OR can automatically inject YAML frontmatter to power up your Obsidian/Logseq Knowledge Graph.
-- **Ruthless Debugging:** You must complete an "Active Recall Sandbox" before moving on. The AI will point out logical flaws directly (trigger warning: zero flattery).
+## Cấu trúc
 
-## 🚀 Installation
-
-Install this skill globally to any standard open agent runtime (like Claude Code, Antigravity, AutoGPT) via the Skills CLI:
-
-```bash
-npx skills add sinhnt0220/learning-everything
+```text
+.agents/skills/adaptive-learning/
+├── SKILL.md
+├── agents/openai.yaml
+├── references/
+└── templates/
 ```
 
-## 💡 How to Use
+`SKILL.md` là điểm vào. Các reference chỉ được đọc khi quyết định dạy cần chúng; templates dùng để tạo artifact khóa học.
 
-Start a chat with your AI Agent and trigger the workflow using these commands:
+## Dùng với Codex
 
-### 1. The Entry Point: `/learn [Subject]`
-Ask the AI to design a course.
-> **Example:** `/learn Systems Thinking`
-The AI will ask you a few diagnostic questions and prompt you for a Root Folder on your machine. It then generates a Master `Learning_Map_MoC.md`.
+Đặt folder `adaptive-learning` vào thư mục skills của workspace/runtime, rồi gọi:
 
-### 2. Start a Lesson: `/start-module [Module Name]`
-Tell the AI to begin one of the modules in the learning map.
-> **Example:** `Attach your MoC file, then type: /start-module 01-Introduction` 
-It will generate a structured lesson with a blank "Active Recall Sandbox". Do the homework.
+```text
+$adaptive-learning dạy tôi [chủ đề] theo trình độ hiện tại, có thực hành khi phù hợp.
+```
 
-### 3. Get Graded: `/complete-module`
-Submit your homework for ruthless grading.
-> **Example:** `Attach your Module file + MoC file, then type: /complete-module`
-Ms. Nguyen will debug your logic, leave an assessment in the file, and automatically update your Master Map's status.
+Để học tiếp một course đã có, dùng `$adaptive-learning` và nói “học tiếp”. Skill sẽ đọc state nội bộ có liên quan trước khi chọn bài kế tiếp.
 
-### 4. Deep Dives: `/define [Concept]`
-Extract a standalone concept.
-> **Example:** `/define Emergence`
-The AI will break it down by definition, mechanism, multi-disciplinary impact, and analogies, saving it into your folder.
+## Privacy boundary
 
----
-*Built with strict pedagogy from the heart of Vietnam.*
+Skill là phần có thể chia sẻ. Course cá nhân, learner profile, learning map và evidence log là dữ liệu riêng của người học; chúng không thuộc bản public release này.
+
+## License
+
+[MIT](LICENSE)

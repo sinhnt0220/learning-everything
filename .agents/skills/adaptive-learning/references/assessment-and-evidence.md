@@ -19,6 +19,7 @@
 - `PASS`: đạt target stage đã công bố.
 - `REVISE`: có một lỗi gốc cần sửa trước khi đạt target stage.
 - `CHƯA ĐỦ BẰNG CHỨNG`: thiếu artifact, khả năng quan sát hoặc chuẩn đủ chắc.
+- `TEACHING GAP`: thiết kế task thiếu prerequisite, nguồn hoặc tiêu chí đã dạy. Đây là lỗi curriculum, không phải kết quả của learner; hủy chấm và sửa/dạy lại.
 
 Luôn ghi `PASS ở stage nào`; không dùng PASS trần như chứng nhận toàn khóa.
 
@@ -53,6 +54,7 @@ Không mặc định Feynman. Giải thích không thay thế chạy code, tính
 - Example/checklist/câu hỏi con cùng decision graph với task làm evidence tối đa `GUIDED`.
 - Feedback sau cold attempt là remediation. Retry chỉ được coi là `INDEPENDENT` khi đáp án chưa bị lộ hoặc dùng một biến thể sạch.
 - Không trừ điểm learner vì đề thiếu dữ kiện, tự mâu thuẫn hoặc stakeholder bị dựng phi thực tế; sửa assessment trước.
+- Không chấm việc learner tự suy diễn license, documentation, bug hay contribution scope nếu cách đọc/kiểm chứng chúng chưa được dạy như năng lực của module.
 
 ## 4. Rubric
 
@@ -97,6 +99,10 @@ Chọn các trục liên quan:
 ### CHƯA ĐỦ BẰNG CHỨNG
 
 Nói thiếu gì và yêu cầu đúng một artifact/dữ kiện có sức phân giải cao.
+
+### TEACHING GAP
+
+Nói rõ task đã đòi điều gì chưa được dạy, hủy yêu cầu retry và quay về orientation/demo. Ghi lỗi ở curriculum, không ở learner.
 
 ## 7. Rolling diagnosis và retention
 

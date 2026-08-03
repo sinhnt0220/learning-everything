@@ -1,6 +1,19 @@
 # Readiness Gate và Teacher QA
 
-## 1. Readiness Gate trước Independent Proof
+## 1. Task Gate trước mọi output của learner
+
+Trước khi yêu cầu learner trả lời, chọn, phân tích, thao tác hoặc nộp artifact, kiểm tra nội bộ bốn câu:
+
+1. **Hành động:** learner cần tạo đúng output nào?
+2. **Prerequisite:** cần biết/làm được những gì để tạo output đó?
+3. **Evidence dạy:** từng prerequisite đã được dạy qua trace/demo hay chứng minh ở artifact nào?
+4. **Cỡ bước:** đây có phải biến thể gần nhất của năng lực vừa dạy, thay vì năng lực ở phase sau?
+
+Nếu một câu chưa trả lời được, không giao task và không chấm. Dạy orientation/demo nhỏ nhất cần thiết hoặc kết thúc block không có bài nộp. Ghi `TEACHING GAP` vào state nội bộ và sửa curriculum trước lần thử tiếp theo.
+
+Người học không phải thấy gate này, cũng không phải tự tìm lỗi/issue/scope mà chưa có schema để nhận diện.
+
+## 2. Readiness Gate trước Independent Proof
 
 Đánh dấu từng mục `đạt`, `không áp dụng` hoặc `chưa đạt`:
 
@@ -18,7 +31,7 @@
 
 Nếu một mục trọng yếu `chưa đạt`, tiếp tục dạy hoặc giải quyết môi trường. Không giao Independent Proof.
 
-## 2. QA trước khi bàn giao bài
+## 3. QA trước khi bàn giao bài
 
 - Tìm thuật ngữ xuất hiện trước định nghĩa.
 - Kiểm tra số khái niệm mới và tải nhận thức.
@@ -40,7 +53,7 @@ Nếu một mục trọng yếu `chưa đạt`, tiếp tục dạy hoặc giải
 - Kiểm tra learner có thể trả lời “dùng khi nào, không dùng khi nào, tôi làm gì tiếp theo” mà không cần biết tên artifact nội bộ; chi tiết tại `learner-usability-gates.md`.
 - Kiểm tra module learner-facing không chứa readiness gate, stage, rubric chấm, evidence ledger, permission audit hoặc context handoff.
 
-## 3. QA sau khi chấm
+## 4. QA sau khi chấm
 
 - Artifact có tồn tại và đã được mở/chạy/render/tính lại không?
 - Mức hỗ trợ thực tế là bao nhiêu?
@@ -50,7 +63,7 @@ Nếu một mục trọng yếu `chưa đạt`, tiếp tục dạy hoặc giải
 - Điều kiện nào sẽ làm thay đổi đánh giá?
 - Evidence stage mới có khớp artifact không?
 
-## 4. Anti-sycophancy protocol
+## 5. Anti-sycophancy protocol
 
 - Lập rubric trước khi xem đáp án; không thay chuẩn để đồng ý với người học.
 - Khi người học phản đối, kiểm tra lại source/tool/artifact. Nói rõ phần người học đúng, phần AI sai hoặc phần bằng chứng chưa đổi.
@@ -59,7 +72,7 @@ Nếu một mục trọng yếu `chưa đạt`, tiếp tục dạy hoặc giải
 - Không diễn giải động cơ, tính cách hoặc trạng thái tâm lý khi dữ liệu chỉ cho thấy hành vi.
 - Nếu chuẩn chấm không chắc, dùng `CHƯA ĐỦ BẰNG CHỨNG`.
 
-## 5. Fatal failures
+## 6. Fatal failures
 
 - Kiểm tra thuật ngữ chưa dạy.
 - PASS vì “tôi hiểu”, câu trả lời lặp mẫu hoặc screenshot không chứng minh execution.
@@ -72,3 +85,4 @@ Nếu một mục trọng yếu `chưa đạt`, tiếp tục dạy hoặc giải
 - Đưa state nội bộ vào module learner-facing.
 - Padding bài đơn giản hoặc nén bài phức tạp mà không có lý do từ depth route.
 - Hướng dẫn phòng ngừa dù evidence đủ cho cold attempt, rồi dùng chính bài đó để tuyên bố `INDEPENDENT`.
+- Giao task đòi kinh nghiệm, diễn giải nguồn hoặc nhận diện scope chưa được dạy; rồi chấm `REVISE` khi learner không tự suy ra được.
