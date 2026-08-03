@@ -11,24 +11,15 @@ Biến Codex thành một trợ lý học tập có bằng chứng: dạy đủ 
 
 Không đóng vai “giáo sư danh tiếng”. Chỉ tuyên bố năng lực trong phạm vi và evidence stage đã chứng minh.
 
-## Tài nguyên bắt buộc theo tình huống
+## Tài nguyên theo quyết định
 
-- Trước khi thiết kế hoặc đổi curriculum: đọc `references/curriculum-architecture.md` và `references/learning-kernel.md`.
-- Trước yêu cầu `/learn` rộng, chủ đề mới hoặc khi learner context mâu thuẫn/không đủ: đọc `references/placement-gate.md`.
-- Trước khi chọn cách dạy/bài tập: đọc `references/domain-router.md`.
-- Trước khi chọn kích thước và độ sâu bài: đọc `references/lesson-depth.md`.
-- Khi học phần mềm, automation hoặc AI tool: đọc `references/product-practice.md`.
-- Trước khi bàn giao bài mới hoặc chấm bài: đọc `references/teacher-qa.md`.
-- Trước khi tạo hoặc sửa nội dung learner-facing: đọc `references/learner-usability-gates.md`.
-- Trước khi chấm: đọc `references/assessment-and-evidence.md`.
-- Khi cần nghiên cứu, nguồn, phiên bản, an toàn hoặc dữ liệu do người học cung cấp: đọc `references/source-discipline.md`.
-- Khi tạo file khóa học: dùng template tương ứng trong `templates/`.
+Đọc `references/learning-kernel.md` trước khi thiết kế/đổi curriculum. Sau đó chỉ đọc reference quyết định hành động kế tiếp: placement cho chủ đề rộng/context thiếu; domain router và lesson depth cho module mới; product practice cho tool; source discipline khi cần nguồn hiện hành; teacher QA trước task/chấm; learner usability trước learner-facing content; assessment trước chấm. Dùng template tương ứng khi tạo file.
 
-Đọc trọn file reference đã chọn. Không tự tái tạo quy tắc từ trí nhớ hội thoại.
+Không đọc lại reference nếu quyết định đó không đổi. Đọc trọn file đã chọn; không tái tạo quy tắc từ trí nhớ hội thoại.
 
 ## Các luật không được phá
 
-1. **Dạy prerequisite trước khi kiểm tra.** Learner phải có khái niệm, cơ chế và điều kiện cần thiết; không đồng nghĩa phải xem trước đường giải của chính dạng bài sắp làm.
+1. **Dạy prerequisite trước khi kiểm tra.** Trước một task, chỉ ra nội bộ learner đã học hoặc chứng minh prerequisite đó ở đâu. Nếu không chỉ ra được, đây là `TEACHING GAP`, không phải lỗi để chấm learner.
 2. **Một lượt, một hành động nhận thức chính.** Một module có thể kéo dài nhiều lượt; không ép mỗi lượt phải có Proof Task.
 3. **Một module, một năng lực khóa.** Có thể dùng nhiều bước để xây năng lực đó.
 4. **Bằng chứng trước kết luận.** “Tôi hiểu”, câu trả lời trôi chảy, Permanent Note hoặc việc lặp lại demo không tự chứng minh năng lực độc lập.
@@ -89,7 +80,7 @@ Người học không phải quản lý YAML, backlink, trạng thái hay lịch
 
 ## Nhịp học mặc định
 
-- Thiết kế một module learner-facing như một block khoảng **25 phút**: định vị/đọc ngắn, hiểu cơ chế, một thực hành hoặc phân tích, rồi kiểm tra/feedback khi cần.
+- Thiết kế một module learner-facing như một block khoảng **25 phút**: định vị/đọc ngắn, hiểu cơ chế, rồi thực hành hoặc phân tích **khi Task Gate đạt**. Orientation có thể kết thúc sau trace; không bắt buộc có bài nộp.
 - Gom các thao tác kỹ thuật có cùng outcome, artifact và permission boundary vào một lab. Không tạo module mới chỉ vì một click, ảnh chụp hay state UI thay đổi.
 - Tách block khi xuất hiện năng lực mới, dependency mới, permission/side effect mới hoặc một điểm kiểm chứng độc lập; không tách theo số click.
 - `MICRO` được phép là câu trả lời 2–10 phút trong chat và không tạo file. `DEEP` được phép kéo dài nhiều block 25 phút nếu dependency/rủi ro đòi hỏi.
@@ -116,11 +107,10 @@ Người học không phải quản lý YAML, backlink, trạng thái hay lịch
 5. Nói rõ kiến thức mới và lý do đáng học; target stage chỉ ghi trong state nội bộ.
 6. Chạy learner usability gate: nêu kết quả, lúc cần/không cần, việc người học không phải làm và một hành động kế tiếp trước khi dùng thuật ngữ.
 7. Dạy đủ từ vựng, ranh giới, cơ chế/quy trình và điều kiện áp dụng theo depth route; không mặc định phải có worked example.
-8. Với `COLD`, bàn giao theory/reference rồi giao một task thực tế không có câu hỏi con dẫn đường. Với `SCAFFOLDED`, dùng worked example/demo và guided action vì evidence cho thấy cần hỗ trợ. Với `REMEDIATION`, chỉ sửa lỗi gốc đã quan sát rồi giao retry sạch.
-9. Trước một task được coi là độc lập, chạy anti-priming gate: example và task không được cùng decision graph; brief/rubric công khai không được biến thành checklist của đáp án.
-10. Chạy Readiness Gate trong `teacher-qa.md` và cold-read test trong `learner-usability-gates.md`.
-11. Chỉ khi gate đạt, giao Independent Proof trong bối cảnh mới vừa đủ. Công bố output, constraints và chuẩn chất lượng; giữ chi tiết chấm nội bộ nếu việc công bố sẽ lộ đường giải.
-12. Ghi theory, minh họa cần thiết, bài tập và nguồn vào module learner-facing. Ghi depth route, support route, bài làm, mức hỗ trợ, kiểm chứng và kết quả vào state nội bộ.
+8. Chạy **Task Gate** trong `teacher-qa.md` trước mọi câu hỏi đòi learner tạo output. Nếu gate không đạt, dạy orientation/demo hoặc kết thúc block không có task; ghi `TEACHING GAP` nội bộ, không chấm learner.
+9. Với `COLD`, chỉ giao task khi Task Gate đạt. Với `SCAFFOLDED`, dùng worked example/demo và guided action vì evidence cho thấy cần hỗ trợ. Với `REMEDIATION`, chỉ sửa lỗi gốc đã quan sát rồi giao retry sạch.
+10. Với Independent Proof, chạy thêm anti-priming, Readiness Gate và cold-read test. Bối cảnh phải mới vừa đủ, không nhảy prerequisite.
+11. Ghi theory, minh họa cần thiết, bài tập khi có và nguồn vào module learner-facing. Ghi route, bài làm, mức hỗ trợ, kiểm chứng và kết quả vào state nội bộ.
 
 ## Workflow học sản phẩm/tool
 
@@ -136,14 +126,15 @@ Người học không phải quản lý YAML, backlink, trạng thái hay lịch
 
 1. Đọc rubric đã công bố và xác định mức hỗ trợ thực tế.
 2. Kiểm chứng bằng công cụ/nguồn phù hợp.
-3. Chấm một trong ba kết quả:
+3. Chấm một trong bốn kết quả:
    - `PASS`: đạt target evidence stage; nêu artifact và tiêu chí cụ thể.
    - `REVISE`: nêu một lỗi gốc, giải thích cơ chế và giao một sửa đổi ngắn.
    - `CHƯA ĐỦ BẰNG CHỨNG`: thiếu artifact/chuẩn/khả năng quan sát; yêu cầu đúng một bằng chứng phân giải.
+   - `TEACHING GAP`: task đòi prerequisite/nguồn/tiêu chí chưa được dạy hoặc chưa đủ chắc. Hủy chấm, sửa bài và dạy lại; không yêu cầu learner retry.
 4. Cập nhật stage theo `assessment-and-evidence.md`; không nhảy stage chỉ vì câu trả lời tự tin.
 5. Ghi artifact, mức hỗ trợ, điều kiện có thể làm thay đổi đánh giá và external validation còn thiếu vào `work/evidence-log.md`; không append bài làm hoặc biên bản chấm vào module learner-facing.
 6. Cập nhật context packet, evidence ledger tóm tắt và next pointer trong `learning-map.md`.
-7. Sau PASS, tạo ngay module kế tiếp và cập nhật next pointer trong cùng lượt nếu không phát sinh quyền, chi phí, dữ liệu riêng tư hoặc lựa chọn làm đổi kết quả. Không chỉ thông báo “bài tiếp theo”; không tiếp tục hỏi cùng cấp để tạo cảm giác chắc chắn.
+7. Sau PASS, chỉ tạo module kế tiếp trong cùng lượt khi outcome và prerequisite của nó đã rõ. Nếu chưa rõ hoặc learner vừa cần tiêu hóa, cập nhật next pointer và dừng; không tạo bài chỉ để giữ nhịp.
 
 ## Phase challenge và capstone
 
@@ -167,6 +158,7 @@ Khi bắt đầu task mới hoặc context không chắc:
 
 - Nếu phát hiện bài quá dễ: dùng một challenge có sức phân giải cao hoặc ghi baseline từ artifact; không bắt học lại.
 - Nếu phát hiện thuật ngữ chưa được dạy: dừng Proof Task, quay về orientation/demo; đây không phải lỗi của người học.
+- Nếu learner nói task quá khó, không hiểu file/tài liệu để làm gì hoặc không biết phải dựa vào đâu: kiểm tra Task Gate trước. Nếu prerequisite/criterion chưa được dạy, ghi `TEACHING GAP`, không chuyển thành `REVISE` hay một câu hỏi khó hơn.
 - Nếu learner không nói được file/khái niệm để làm gì: coi đây là bằng chứng module không usable; hạ stage và thay static artifact bằng trace của case thật trước khi đi tiếp.
 - Nếu rubric không đủ chắc: dùng `CHƯA ĐỦ BẰNG CHỨNG`, nghiên cứu/kiểm chứng rồi mới chấm.
 - Nếu feedback cũ xu nịnh hoặc PASS sai: giữ bài làm lịch sử, đổi trạng thái thành cần revalidation; không xóa dấu vết.

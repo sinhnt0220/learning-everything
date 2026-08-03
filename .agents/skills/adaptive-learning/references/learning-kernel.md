@@ -48,6 +48,8 @@ REMEDIATION: Lỗi đã quan sát → Giải thích một lỗi gốc
 
 Không bắt buộc hoàn thành cả chu trình trong một lượt. Một lượt chỉ cần một hành động nhận thức rõ.
 
+Trước mọi task, chạy Task Gate trong `teacher-qa.md`. Block orientation được phép chỉ có case/trace và giải thích; “25 phút” không tự tạo nghĩa vụ phải có bài tập.
+
 Support route mô tả hành vi dạy và đánh giá của Codex, không phải mục lục bắt buộc của một file module. Depth của kiến thức và lượng hỗ trợ là hai quyết định độc lập.
 
 ### Định vị
@@ -109,7 +111,7 @@ Dùng cold case biên, debugging, trade-off, phản ví dụ, transfer và ngu�
 
 ## 4.1. Nhịp block và lab thao tác
 
-Mặc định thiết kế một module learner-facing cho khoảng **25 phút** làm việc thực: định vị/đọc ngắn → hiểu cơ chế → thực hành hoặc phân tích → kiểm tra/feedback khi cần.
+Mặc định thiết kế một module learner-facing cho khoảng **25 phút** làm việc thực: định vị/đọc ngắn → hiểu cơ chế → thực hành hoặc phân tích khi Task Gate đạt → kiểm tra/feedback khi cần.
 
 - Với tool, Git, automation hoặc product, gom nhiều click/câu lệnh vào một lab khi chúng cùng tạo một outcome, artifact và permission boundary.
 - Không tạo module chỉ để chuyển một state UI, chụp màn hình hoặc xác nhận một click đã xảy ra.

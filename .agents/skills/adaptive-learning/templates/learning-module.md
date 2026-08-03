@@ -22,9 +22,9 @@
 
 [Chỉ giữ mục này khi nó giúp tránh một nhầm lẫn đáng kể. Nếu không cần, xóa cả heading.]
 
-## Bài tập
+## Thực hành (tùy chọn)
 
-[Tùy chọn. Giao đúng một output thực tế: một quyết định, artifact, phân tích, sửa đổi hoặc lời giải. Cung cấp đủ dữ kiện và constraints nhưng không chia đường suy luận thành các câu hỏi con tương ứng với rubric.]
+[Chỉ giữ mục này khi learner đã được dạy/đã có prerequisite để làm action. Nếu không, xóa cả mục; orientation không cần bài nộp. Giao đúng một output thực tế: một quyết định, artifact, phân tích, sửa đổi hoặc lời giải. Cung cấp đủ dữ kiện và constraints nhưng không chia đường suy luận thành các câu hỏi con tương ứng với rubric.]
 
 [Nếu hành động dùng tài khoản, dữ liệu thật, credits hoặc có tác động bên ngoài, đặt một ranh giới an toàn ngắn ngay tại đây.]
 
